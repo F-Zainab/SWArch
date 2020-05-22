@@ -16,11 +16,11 @@ RULE_VALID_PROVINCES = {'Australia': {'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'W
                         'Mexico': {"AGS", "MOR", "NAY", "BCS", "CAM", "OAX", "COAH", "PUE", "COL", "QRO", "CHIS",
                                    "Q ROO", "CHIH", "SLP", "SIN", "DGO", "SON", "GTO", "TAB", "GRO",
                                    "TAMPS", "HGO", "TLAX", "JAL", "VER", "MEX", "YUC", "MICH", "ZAC"},
-                        'United States': {"AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+                        'United States': ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
                                           "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
                                           "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
                                           "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
-                                          "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"}
+                                          "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
                         }
 
 # standard is street, postcode, country and optional
@@ -150,10 +150,9 @@ RULE_OPTIONAL_FIELDS = {"Argentina": floor + department,
                         "Malaysia": floor + building_name,
                         "New Zealand": apt + district,
                         "Northern Ireland": county + building_name,
-                        "Portugal": standard,
                         "Puerto Rico": apt,
-                        "Taiwan": floor + building_name,
-                        "Romania": block + entrance + floor + apt,
+                        "Taiwan": street2,
+                        "Romania": street2 + apt,
                         "Russia": district + province,
                         "Scotland": county + building_name,
                         "Singapore": street2,
